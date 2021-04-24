@@ -1,0 +1,1 @@
+test if adding a terminal in a nginx server page
