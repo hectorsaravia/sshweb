@@ -1,10 +1,10 @@
-const http = require('http');
-const {createReadStream} = require('fs')
+import { createServer } from 'http';
+import { createReadStream } from 'fs';
 
 const hostname = 'localhost';
 const port = 3000;
 
-const server = http.createServer((req, res) => {
+const server = createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html' });
   createReadStream('source/index.html').pipe(res);
 });
